@@ -1,24 +1,23 @@
-* {
-  margin: 0;
-  padding: 0; }
-
-html,
-body {
-  height: 100%; }
-
 @keyframes floating {
   50% {
-    transform: rotate(-70deg); }
+    transform: rotate(-70deg);
+  }
   100% {
-    transform: rotate(-90deg); } }
+    transform: rotate(-90deg);
+  }
+}
 
 @keyframes floating-two {
   50% {
-    transform: rotate(-100deg); }
+    transform: rotate(-100deg);
+  }
   90% {
-    transform: rotate(-118deg); }
+    transform: rotate(-118deg);
+  }
   100% {
-    transform: rotate(-120deg); } }
+    transform: rotate(-120deg);
+  }
+}
 
 header {
   position: relative;
@@ -26,50 +25,60 @@ header {
   background-image: url("../assets/header-bg.png");
   background-size: cover;
   background-position: center;
-  display: flex;
-  justify-content: center;
-  align-items: center; }
-  header .layer {
+  @include centerized-flex;
+  & .layer {
     position: absolute;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.3); }
-  header .logo img {
-    filter: invert(1);
-    width: 50rem; }
-  header .bullet {
-    position: absolute; }
-    header .bullet-one {
+    background-color: rgba($color: #000000, $alpha: 0.3);
+  }
+  & .logo {
+    & img {
+      filter: invert(1);
+      width: 50rem;
+    }
+  }
+  & .bullet {
+    position: absolute;
+    &-one {
       width: 18%;
       display: block;
-      bottom: 15%;
-      left: 8%; }
-      header .bullet-one img {
+      & img {
         animation-duration: 10s;
         animation-name: floating;
         animation-iteration-count: infinite;
         width: 100%;
         transform: rotate(-90deg);
-        filter: blur(3px); }
-    header .bullet-two {
+        filter: blur(3px);
+      }
+      bottom: 15%;
+      left: 8%;
+    }
+    &-two {
       width: 10%;
       display: block;
+      & img {
+        animation-duration: 8s;
+        animation-name: floating-two;
+        animation-iteration-count: infinite;
+        width: 100%;
+        filter: blur(2px);
+      }
       top: 15%;
-      right: 15%; }
-      header .bullet-two img {
-        animation-duration: 8s;
-        animation-name: floating-two;
-        animation-iteration-count: infinite;
-        width: 100%;
-        filter: blur(2px); }
-    header .bullet-three {
+      right: 15%;
+    }
+    &-three {
       width: 5%;
-      bottom: 30%;
-      right: 20%; }
-      header .bullet-three img {
+      & img {
         animation-duration: 8s;
         animation-name: floating-two;
         animation-iteration-count: infinite;
         width: 100%;
-        transform: rotate(-120deg); }
+        transform: rotate(-120deg);
+      }
+      bottom: 30%;
+      right: 20%;
+    }
+  }
+}

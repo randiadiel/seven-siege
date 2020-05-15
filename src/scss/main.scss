@@ -1,0 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
+}
+
+@mixin centerized-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@import "./index";
