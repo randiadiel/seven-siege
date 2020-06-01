@@ -1,51 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rainbow Seven Seige</title>
+    <link rel="stylesheet" href="../dist/css/index.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rainbow Seven Seige</title>
-  <link rel="stylesheet" href="../dist/css/index.css" />
-</head>
-
-<body id="mousearea">
-  <nav id="navbar">
-    <img src="../dist/assets/logo/logo.png" alt="seven-siege-logo">
-    <span class="navbar-content">
-      <a href="#home">Home</a>
-      <a href="#event">Event</a>
-      <a href="Maps">Maps</a>
-    </span>
-    
-  </nav>
-  <header>
-    <video autoplay muted loop id="myVideo">
-      <source
-        src="https://cdn.discordapp.com/attachments/717018339729211453/717024698696990831/bg_vid.mp4"
-        type="video/mp4"
-      />
-    </video>
-    <div class="layer"></div>
-    <div class="container">
-      <div class="logo">
-        <img src="../dist/assets/logo/logo.png" alt="Logo Rainbow Seven Siege" />
+  <body id="mousearea">
+    <nav id="navbar">
+      <img src="../dist/assets/logo/logo.png" alt="seven-siege-logo" />
+      <span class="navbar-content">
+        <a href="#home">Home</a>
+        <a href="#event">Event</a>
+        <a href="Maps">Maps</a>
+      </span>
+    </nav>
+    <header>
+      <video autoplay muted loop id="myVideo">
+        <source
+          src="https://cdn.discordapp.com/attachments/717018339729211453/717024698696990831/bg_vid.mp4"
+          type="video/mp4"
+        />
+      </video>
+      <div class="layer"></div>
+      <div class="container">
+        <div class="logo">
+          <img
+            src="../dist/assets/logo/logo.png"
+            alt="Logo Rainbow Seven Siege"
+          />
+        </div>
+        <div class="home-nav">
+          <a href="#home">Home</a>
+          <a href="#event">Event</a>
+          <a href="Maps">Maps</a>
+        </div>
+        <a href="#pre-order" class="pre-order-button">Pre-Order Now!</a>
       </div>
-      <div></div>
-      <a href="#pre-order" class="pre-order-button">Pre-Order Now!</a>
-    </div>
-    <span class="bullet bullet-one"><img src="../dist/assets/bullet2.png" alt="bullet" /></span>
-    <span class="bullet bullet-two"><img src="../dist/assets/bullet2.png" alt="bullet" /></span>
-    <span class="bullet bullet-three"><img src="../dist/assets/bullet1.png" alt="bullet" /></span>
-  </header>
+      <span class="bullet bullet-one"
+        ><img src="../dist/assets/bullet2.png" alt="bullet"
+      /></span>
+      <span class="bullet bullet-two"
+        ><img src="../dist/assets/bullet2.png" alt="bullet"
+      /></span>
+      <span class="bullet bullet-three"
+        ><img src="../dist/assets/bullet1.png" alt="bullet"
+      /></span>
+    </header>
 
-  <main class="main">
-    <div class="carousel">
-      <div class="carousel-container">
-        <div class="carousel-section carousel-section-left">
-          <span class="carousel-arrow carousel-arrow-left"></span> 
+    <main class="main">
+      <div class="carousel">
+        <div class="carousel-container">
+          <div class="carousel-section carousel-section-left">
+            <span class="carousel-arrow carousel-arrow-left"></span>
             <div class="carousel-body">
               <div class="carousel-images">
-                <img src="../dist/assets/carousel-1.png" class="carousel-image" alt="carousel-1">
+                <img
+                  src="../dist/assets/carousel-1.png"
+                  class="carousel-image"
+                  alt="carousel-1"
+                />
               </div>
               <div class="carousel-dots">
                 <div class="carousel-dot"></div>
@@ -53,16 +68,20 @@
                 <div class="carousel-dot"></div>
               </div>
             </div>
-          <span class="carousel-arrow carousel-arrow-right"></span>
+            <span class="carousel-arrow carousel-arrow-right"></span>
+          </div>
+          <div class="carousel-section carousel-section-right">
+            <div class="carousel-heading">judul content</div>
+            <div class="carousel-paragraph">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor
+              numquam pariatur earum. Ullam aperiam natus deserunt aliquam ad
+              inventore atque. Neque repellendus laudantium natus ipsam
+              architecto unde non vel. Dolor!
+            </div>
+          </div>
+          <script type="module" src="../dist/js/index.js"></script>
         </div>
-        <div class="carousel-section carousel-section-right">
-          <div class="carousel-heading">judul content</div>
-          <div class="carousel-paragraph">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor numquam pariatur earum. Ullam aperiam natus deserunt aliquam ad inventore atque. Neque repellendus laudantium natus ipsam architecto unde non vel. Dolor!</div>
-        </div>
-  </main>
-
-
-  <script type="module" src="../dist/js/index.js"></script>
-</body>
-
+      </div>
+    </main>
+  </body>
 </html>
