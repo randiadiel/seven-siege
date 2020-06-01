@@ -17,5 +17,13 @@ $(document).ready(function ($) {
     $(".bullet-three").css({
       transform: `translate(${moveX / 3}px, ${moveY / 3}px)`,
     });
+
+    //event-carousel
+    
+
+
   });
+
+
+
 });
