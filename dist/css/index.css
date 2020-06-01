@@ -91,6 +91,12 @@ header {
     header .container .logo img {
       filter: invert(1);
       width: 60vw; }
+    header .container #home-navbar {
+      margin: 1rem 0; }
+      header .container #home-navbar a {
+        text-decoration: none;
+        color: white;
+        padding: 0 1rem; }
     header .container .pre-order-button {
       font-family: "Montserrat-Bold";
       color: black;

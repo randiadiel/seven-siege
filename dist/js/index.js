@@ -6,8 +6,10 @@ $(document).ready(function ($) {
     var currentScrollPos = window.pageYOffset;
     if (currentScrollPos > scrollPos) {
       document.getElementById("navbar").style.top = "0px";
+      document.getElementById("home-navbar").style.display = "none";
     } else {
       document.getElementById("navbar").style.top = "-50px";
+      document.getElementById("home-navbar").style.display = "block";
     }
     scrollPos = currentScrollPos;
   };

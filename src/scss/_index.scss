@@ -83,6 +83,14 @@ header {
         width: 60vw;
       }
     }
+    & #home-navbar {
+      margin: 1rem 0;
+      & a {
+        text-decoration: none;
+        color: white;
+        padding: 0 1rem;
+      }
+    }
     & .pre-order-button {
       font-family: "Montserrat-Bold";
       color: black;
