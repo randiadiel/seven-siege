@@ -7,12 +7,7 @@ body {
   height: 100%;
 }
 
-@mixin centerized-flex {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 @import "./variable";
 @import "./index";
 @import "./event";
+@import "./mixin";
