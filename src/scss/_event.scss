@@ -6,7 +6,7 @@
   }
   
   .carousel{
-    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url(../../dist/assets/carousel-background.png);
+    background-image: linear-gradient( rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85) ),url(../../dist/assets/carousel-background.png);
     background-size: cover;
     background-position: center;
     width: 100%;
@@ -39,8 +39,14 @@
   
     &-image{
       max-height: 20rem;
+      display: none;
       &s{
-      
+        overflow: hidden;
+      max-height: 20rem;
+      }
+
+      &-active{
+          display: inline;
       }
     }
   
@@ -51,6 +57,7 @@
       border-radius: 50%;
       filter: brightness(50%);
       margin: 0.3rem 0.4rem;
+      margin-top: 1rem;
 
       &:hover{
           filter: brightness(100%);
@@ -61,6 +68,10 @@
         display: flex;
         justify-content: center;
         align-items: center;
+      }
+      &-active{
+        filter: brightness(100%);
+
       }
     }
   

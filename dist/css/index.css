@@ -86,7 +86,7 @@ header {
   align-items: center; }
 
 .carousel {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../dist/assets/carousel-background.png);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url(../../dist/assets/carousel-background.png);
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -110,14 +110,21 @@ header {
     .carousel-arrow-left {
       transform: rotate(180deg); }
   .carousel-image {
-    max-height: 20rem; }
+    max-height: 20rem;
+    display: none; }
+    .carousel-images {
+      overflow: hidden;
+      max-height: 20rem; }
+    .carousel-image-active {
+      display: inline; }
   .carousel-dot {
     width: 10px;
     height: 10px;
     background-color: white;
     border-radius: 50%;
     filter: brightness(50%);
-    margin: 0.3rem 0.4rem; }
+    margin: 0.3rem 0.4rem;
+    margin-top: 1rem; }
     .carousel-dot:hover {
       filter: brightness(100%);
       cursor: pointer; }
@@ -125,6 +132,8 @@ header {
       display: flex;
       justify-content: center;
       align-items: center; }
+    .carousel-dot-active {
+      filter: brightness(100%); }
   .carousel-section {
     display: flex;
     justify-content: center;
