@@ -1,6 +1,16 @@
 import "../js/jquery/jquery.min.js";
 
 $(document).ready(function ($) {
+  let scrollPos = window.pageYOffset;
+  window.onscroll = function () {
+    var currentScrollPos = window.pageYOffset;
+    if (currentScrollPos > scrollPos) {
+      document.getElementById("navbar").style.top = "0px";
+    } else {
+      document.getElementById("navbar").style.top = "-50px";
+    }
+    scrollPos = currentScrollPos;
+  };
   $("#mousearea").mousemove(function (e) {
     let height = e.pageY;
     const width = e.pageX;
@@ -19,11 +29,5 @@ $(document).ready(function ($) {
     });
 
     //event-carousel
-    
-
-
   });
-
-
-
 });
