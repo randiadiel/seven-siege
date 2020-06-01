@@ -7,7 +7,7 @@ body {
   height: 100%;
 }
 
+@import "./mixin";
 @import "./variable";
 @import "./index";
 @import "./event";
-@import "./mixin";

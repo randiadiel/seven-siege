@@ -43,7 +43,7 @@ header {
   & .logo {
     & img {
       filter: invert(1);
-      width: 50rem;
+      width: 60vw;
     }
   }
   & .bullet {
@@ -86,6 +86,16 @@ header {
       }
       bottom: 30%;
       right: 20%;
+    }
+  }
+  @include tablet {
+    & .bullet {
+      display: none;
+    }
+  }
+  @include mobile {
+    & .bullet {
+      display: none;
     }
   }
 }
