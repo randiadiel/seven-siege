@@ -1,18 +1,27 @@
+@font-face {
+  font-family: "Montserrat-Bold";
+  src: url("../assets/fonts/Montserrat-Bold.ttf");
+}
+@font-face {
+  font-family: "Montserrat-Regular";
+  src: url("../assets/fonts/Montserrat-Regular.ttf");
+}
+@font-face {
+  font-family: "Montserrat-Light";
+  src: url("../assets/fonts/Montserrat-Light.ttf");
+}
+
 * {
   margin: 0;
   padding: 0;
+  font-family: "Montserrat-Regular";
 }
 html,
 body {
   height: 100%;
 }
 
-@mixin centerized-flex {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
+@import "./mixin";
 @import "./variable";
 @import "./index";
 @import "./event";

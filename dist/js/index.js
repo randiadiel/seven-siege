@@ -16,6 +16,18 @@ const eventContent = [
 ]
 
 $(document).ready(function ($) {
+  let scrollPos = window.pageYOffset;
+  window.onscroll = function () {
+    var currentScrollPos = window.pageYOffset;
+    if (currentScrollPos > scrollPos) {
+      document.getElementById("navbar").style.top = "0px";
+      document.getElementById("home-navbar").style.display = "none";
+    } else {
+      document.getElementById("navbar").style.top = "-50px";
+      document.getElementById("home-navbar").style.display = "block";
+    }
+    scrollPos = currentScrollPos;
+  };
   $("#mousearea").mousemove(function (e) {
     let height = e.pageY;
     const width = e.pageX;
@@ -33,12 +45,10 @@ $(document).ready(function ($) {
       transform: `translate(${moveX / 3}px, ${moveY / 3}px)`,
     });
 
-    //event-carousel
-
-  
-
   });
 
+    //event-carousel
+  
   const imageCount = 3;
   const initDots = (imageCount) => {
     for(let i = 1 ; i <= imageCount ; i++){

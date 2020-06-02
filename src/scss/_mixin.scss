@@ -1,0 +1,17 @@
+@mixin centerized-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin mobile {
+  @media only screen and (max-width: 568px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media only screen and (max-width: 320px) {
+    @content;
+  }
+}
