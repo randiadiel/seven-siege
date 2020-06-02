@@ -19,6 +19,38 @@
   }
 }
 
+#navbar {
+  background-color: #333;
+  position: fixed;
+  top: -50px;
+  width: 100vw;
+  transition: top 0.3s;
+  z-index: 99;
+  display: flex;
+  justify-content: space-between;
+  & img {
+    float: left;
+    height: 50px;
+    filter: invert(1);
+    margin-left: 3rem;
+  }
+  & .navbar-content {
+    display: flex;
+    margin-right: 3rem;
+  }
+  & a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    text-decoration: none;
+  }
+  & a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+}
+
 header {
   position: relative;
   min-height: 100%;
@@ -26,6 +58,7 @@ header {
   background-size: cover;
   background-position: center;
   @include centerized-flex;
+  flex-direction: column;
   & #myVideo {
     position: absolute;
     right: 0;
@@ -40,10 +73,32 @@ header {
     height: 100%;
     background-color: rgba($color: #000000, $alpha: 0.3);
   }
-  & .logo {
-    & img {
-      filter: invert(1);
-      width: 50rem;
+  & .container {
+    z-index: 90;
+    @include centerized-flex;
+    flex-direction: column;
+    & .logo {
+      & img {
+        filter: invert(1);
+        width: 60vw;
+      }
+    }
+    & #home-navbar {
+      margin: 1rem 0;
+      & a {
+        text-decoration: none;
+        color: white;
+        padding: 0 1rem;
+      }
+    }
+    & .pre-order-button {
+      font-family: "Montserrat-Bold";
+      color: black;
+      text-decoration: none;
+      background-color: #eebe36;
+      border: none;
+      padding: 0.7rem 1.5rem;
+      border-radius: 0.5rem;
     }
   }
   & .bullet {
@@ -86,6 +141,16 @@ header {
       }
       bottom: 30%;
       right: 20%;
+    }
+  }
+  @include tablet {
+    & .bullet {
+      display: none;
+    }
+  }
+  @include mobile {
+    & .bullet {
+      display: none;
     }
   }
 }

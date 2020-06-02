@@ -1,8 +1,24 @@
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-.main{
+.carousel {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../../dist/assets/carousel-background.png);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    width: fit-content;
+    height: fit-content;
   }
   
   .carousel{
@@ -15,26 +31,19 @@
     justify-content: center;
     align-items: center;
 
-    &-container{
-        display: flex;
-        width: fit-content;
-        height: fit-content;
+  &-arrow {
+    background-image: url(../../dist/assets/arrows.svg);
+    width: $ArrowSize;
+    height: $ArrowSize;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    filter: invert(1);
+    cursor: pointer;
+    &-left {
+      transform: rotate(180deg);
     }
-
-    &-arrow{
-      background-image: url(../../dist/assets/arrows.svg);
-      width: $ArrowSize;
-      height: $ArrowSize;
-      background-position: center;
-      background-size: contain;
-      background-repeat: no-repeat;
-      filter: invert(1);
-      cursor: pointer;
-      &-left{
-        transform: rotate(180deg);
-      }
-      &-right{
-      }
+    &-right {
     }
   
     &-image{
@@ -59,56 +68,65 @@
       margin: 0.3rem 0.4rem;
       margin-top: 1rem;
 
-      &:hover{
-          filter: brightness(100%);
-          cursor: pointer;
-      }
+  &-dot {
+    width: $DotSize;
+    height: $DotSize;
+    background-color: white;
+    border-radius: 50%;
+    filter: brightness(50%);
+    margin: 0.3rem 0.4rem;
 
-      &s{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
+   
       &-active{
         filter: brightness(100%);
 
       }
+    &:hover {
+      filter: brightness(100%);
+      cursor: pointer;
     }
-  
-    &-section{
+
+    &s {
       display: flex;
       justify-content: center;
       align-items: center;
-      color: white;
-      
-      &-left{
-        width: 60%;
-      }
-      &-right{
-        flex-direction: column;
-        width: 40%;
-        text-align: justify;
-        justify-content: flex-start;
-        align-items: flex-start;
-      }
-    }
-
-    &-heading{
-        margin: 2rem 0;
-        text-transform: uppercase;
-        font-size: $FontSizeHeading;
-        font-weight: bold;
-    }
-
-    &-paragraph{
-        width: 80%;
-        color: #ffffff;
-        font-weight: 300;
-    }
-
-    &-body{
-      display: flex;
-      flex-direction: column;
-      margin: 1rem;
     }
   }
+
+  &-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+
+    &-left {
+      width: 60%;
+    }
+    &-right {
+      flex-direction: column;
+      width: 40%;
+      text-align: justify;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+  }
+
+  &-heading {
+    margin: 2rem 0;
+    text-transform: uppercase;
+    font-size: $FontSizeHeading;
+    font-weight: bold;
+  }
+
+  &-paragraph {
+    width: 80%;
+    color: #ffffff;
+    font-weight: 300;
+  }
+
+  &-body {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+  }
+}
