@@ -14,6 +14,7 @@
     margin: 0;
 }
 .caro{
+    top: 125px;
     position: relative;
     height: 400px;
     width: 50%;
@@ -76,7 +77,8 @@
 }
 
 .carousel_nav{  
-    display: flex;    justify-content:center;
+    display: flex;    
+    justify-content:center;
     padding: 10px 0;
 }
 
@@ -96,23 +98,48 @@
 
 .is-hidden {display: none;}
 
-.Name{
-    margin-top: 50px;
+.text{
+    margin-top: 175px;
     color: white;
-    list-style: none;
+    display: flex;
+    width: 600px; 
+    height: 25%;
+    position: relative;
+    left: 40px;
+    overflow: hidden;
 }
 
-.head1{
+.text_track{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    height: 100%;
+    position: relative;
+    transition: transform 250ms ease-in;
+}
+
+.carousel_text{
+    position: absolute;
+    width: 500px;
+}
+
+.header{
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
     font-size: 30px;
- 
+    margin-bottom: 30px;
+    object-fit: cover;
 }
 
-.para1{
+.paraHead{
+    font-size: 25px;
+}
+
+.paragraph{
     display: flex;
-    margin-left: 70px;
+    justify-content: center;
+    align-items: center;
     font-size: 20px;
-    width: 500px;
+    object-fit: cover;
 }
