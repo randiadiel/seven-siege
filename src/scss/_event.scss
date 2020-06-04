@@ -14,11 +14,28 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 
   &-container {
     display: flex;
     width: fit-content;
     height: fit-content;
+  }
+
+  @include mobile{
+    &-container {
+      position: absolute;
+      top: 1rem;
+      flex-direction: column;
+    }
+  }
+
+  @include tablet{
+    &-container {
+      @include centerized-flex;
+      flex-direction: column;
+
+    }
   }
 
   &-arrow {
@@ -35,20 +52,46 @@
     }
     &-right {
     }
-  }
-  
-    &-image{
-      max-height: 20rem;
-      display: none;
-      &s{
-        overflow: hidden;
-      max-height: 20rem;
+
+    @include mobile{
+      &-left{
+        left: 4rem;
       }
 
-      &-active{
-          display: inline;
+      &-right{
+        right: 4rem;
       }
     }
+  }
+
+  @include mobile{
+    &-arrow{
+      width: $ArrowSize - 10px;
+      height: $ArrowSize - 10px;
+      position: absolute;
+    }
+  }
+  
+  
+
+  &-image{
+    max-height: 20rem;
+    display: none;
+    &s{
+      overflow: hidden;
+    max-height: 20rem;
+    }
+
+    &-active{
+        display: inline;
+    }
+  }
+
+  @include mobile{
+    &-image{
+      width: 90vw;
+    }
+  }
   
 
   &-dot {
@@ -56,14 +99,14 @@
     height: $DotSize;
     background-color: white;
     border-radius: 50%;
-    filter: brightness(50%);
+    filter: brightness(30%);
     margin: 0.3rem 0.4rem;
 
-  
       &-active{
         filter: brightness(100%);
 
       }
+      
     &:hover {
       filter: brightness(100%);
       cursor: pointer;
@@ -87,10 +130,14 @@
     }
     &-right {
       flex-direction: column;
-      width: 40%;
       text-align: justify;
       justify-content: flex-start;
       align-items: flex-start;
+    }
+
+    @include mobile{
+      @include centerized-flex;
+      padding: 0rem 3rem;
     }
   }
 
@@ -105,6 +152,13 @@
     width: 80%;
     color: #ffffff;
     font-weight: 300;
+    
+  }
+
+  @include mobile{
+    &-paragraph{
+      width: 65%;
+    }
   }
 
   &-body {

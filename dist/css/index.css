@@ -140,10 +140,10 @@ header {
         animation-iteration-count: infinite;
         width: 100%;
         transform: rotate(-120deg); }
-  @media only screen and (max-width: 320px) {
+  @media only screen and (max-width: 992px) {
     header .bullet {
       display: none; } }
-  @media only screen and (max-width: 568px) {
+  @media only screen and (max-width: 768px) {
     header .bullet {
       display: none; } }
 
@@ -160,11 +160,23 @@ header {
   height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  position: relative; }
   .carousel-container {
     display: flex;
     width: fit-content;
     height: fit-content; }
+  @media only screen and (max-width: 768px) {
+    .carousel-container {
+      position: absolute;
+      top: 1rem;
+      flex-direction: column; } }
+  @media only screen and (max-width: 992px) {
+    .carousel-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column; } }
   .carousel-arrow {
     background-image: url(../../dist/assets/arrows.svg);
     width: 40px;
@@ -176,6 +188,16 @@ header {
     cursor: pointer; }
     .carousel-arrow-left {
       transform: rotate(180deg); }
+    @media only screen and (max-width: 768px) {
+      .carousel-arrow-left {
+        left: 4rem; }
+      .carousel-arrow-right {
+        right: 4rem; } }
+  @media only screen and (max-width: 768px) {
+    .carousel-arrow {
+      width: 30px;
+      height: 30px;
+      position: absolute; } }
   .carousel-image {
     max-height: 20rem;
     display: none; }
@@ -184,12 +206,15 @@ header {
       max-height: 20rem; }
     .carousel-image-active {
       display: inline; }
+  @media only screen and (max-width: 768px) {
+    .carousel-image {
+      width: 90vw; } }
   .carousel-dot {
     width: 10px;
     height: 10px;
     background-color: white;
     border-radius: 50%;
-    filter: brightness(50%);
+    filter: brightness(30%);
     margin: 0.3rem 0.4rem; }
     .carousel-dot-active {
       filter: brightness(100%); }
@@ -209,10 +234,15 @@ header {
       width: 60%; }
     .carousel-section-right {
       flex-direction: column;
-      width: 40%;
       text-align: justify;
       justify-content: flex-start;
       align-items: flex-start; }
+    @media only screen and (max-width: 768px) {
+      .carousel-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0rem 3rem; } }
   .carousel-heading {
     margin: 2rem 0;
     text-transform: uppercase;
@@ -222,6 +252,9 @@ header {
     width: 80%;
     color: #ffffff;
     font-weight: 300; }
+  @media only screen and (max-width: 768px) {
+    .carousel-paragraph {
+      width: 65%; } }
   .carousel-body {
     display: flex;
     flex-direction: column;
