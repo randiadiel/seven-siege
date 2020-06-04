@@ -1,49 +1,37 @@
 @font-face {
   font-family: "Montserrat-Bold";
-  src: url("../assets/fonts/Montserrat-Bold.ttf");
-}
+  src: url("../assets/fonts/Montserrat-Bold.ttf"); }
 
 @font-face {
   font-family: "Montserrat-Regular";
-  src: url("../assets/fonts/Montserrat-Regular.ttf");
-}
+  src: url("../assets/fonts/Montserrat-Regular.ttf"); }
 
 @font-face {
   font-family: "Montserrat-Light";
-  src: url("../assets/fonts/Montserrat-Light.ttf");
-}
+  src: url("../assets/fonts/Montserrat-Light.ttf"); }
 
 * {
   margin: 0;
   padding: 0;
-  font-family: "Montserrat-Regular";
-}
+  font-family: "Montserrat-Regular"; }
 
 html,
 body {
-  height: 100%;
-}
+  height: 100%; }
 
 @keyframes floating {
   50% {
-    transform: rotate(-70deg);
-  }
+    transform: rotate(-70deg); }
   100% {
-    transform: rotate(-90deg);
-  }
-}
+    transform: rotate(-90deg); } }
 
 @keyframes floating-two {
   50% {
-    transform: rotate(-100deg);
-  }
+    transform: rotate(-100deg); }
   90% {
-    transform: rotate(-118deg);
-  }
+    transform: rotate(-118deg); }
   100% {
-    transform: rotate(-120deg);
-  }
-}
+    transform: rotate(-120deg); } }
 
 #navbar {
   background-color: #333;
@@ -53,29 +41,24 @@ body {
   transition: top 0.3s;
   z-index: 99;
   display: flex;
-  justify-content: space-between;
-}
-#navbar img {
-  float: left;
-  height: 50px;
-  filter: invert(1);
-  margin-left: 3rem;
-}
-#navbar .navbar-content {
-  display: flex;
-  margin-right: 3rem;
-}
-#navbar a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 15px;
-  text-decoration: none;
-}
-#navbar a:hover {
-  background-color: #ddd;
-  color: black;
-}
+  justify-content: space-between; }
+  #navbar img {
+    float: left;
+    height: 50px;
+    filter: invert(1);
+    margin-left: 3rem; }
+  #navbar .navbar-content {
+    display: flex;
+    margin-right: 3rem; }
+  #navbar a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    text-decoration: none; }
+  #navbar a:hover {
+    background-color: #ddd;
+    color: black; }
 
 header {
   position: relative;
@@ -86,233 +69,190 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-}
-header #myVideo {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
-}
-header .layer {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
-}
-header .container {
-  z-index: 90;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-header .container .logo img {
-  filter: invert(1);
-  width: 60vw;
-}
-header .container #home-navbar {
-  margin: 1rem 0;
-}
-header .container #home-navbar a {
-  text-decoration: none;
-  color: white;
-  padding: 0 1rem;
-}
-header .container .pre-order-button {
-  font-family: "Montserrat-Bold";
-  color: black;
-  text-decoration: none;
-  background-color: #eebe36;
-  border: none;
-  padding: 0.7rem 1.5rem;
-  border-radius: 0.5rem;
-}
-header .bullet {
-  position: absolute;
-}
-header .bullet-one {
-  width: 18%;
-  display: block;
-  bottom: 15%;
-  left: 8%;
-}
-header .bullet-one img {
-  animation-duration: 10s;
-  animation-name: floating;
-  animation-iteration-count: infinite;
-  width: 100%;
-  transform: rotate(-90deg);
-  filter: blur(3px);
-}
-header .bullet-two {
-  width: 10%;
-  display: block;
-  top: 15%;
-  right: 15%;
-}
-header .bullet-two img {
-  animation-duration: 8s;
-  animation-name: floating-two;
-  animation-iteration-count: infinite;
-  width: 100%;
-  filter: blur(2px);
-}
-header .bullet-three {
-  width: 5%;
-  bottom: 30%;
-  right: 20%;
-}
-header .bullet-three img {
-  animation-duration: 8s;
-  animation-name: floating-two;
-  animation-iteration-count: infinite;
-  width: 100%;
-  transform: rotate(-120deg);
-}
-@media only screen and (max-width: 320px) {
+  flex-direction: column; }
+  header #myVideo {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%; }
+  header .layer {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); }
+  header .container {
+    z-index: 90;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; }
+    header .container .logo img {
+      filter: invert(1);
+      width: 60vw; }
+    header .container #home-navbar {
+      margin: 1rem 0; }
+      header .container #home-navbar a {
+        text-decoration: none;
+        color: white;
+        padding: 0 1rem; }
+    header .container .pre-order-button {
+      font-family: "Montserrat-Bold";
+      color: black;
+      text-decoration: none;
+      background-color: #eebe36;
+      border: none;
+      padding: 0.7rem 1.5rem;
+      border-radius: 0.5rem; }
   header .bullet {
-    display: none;
-  }
-}
-@media only screen and (max-width: 568px) {
-  header .bullet {
-    display: none;
-  }
-}
+    position: absolute; }
+    header .bullet-one {
+      width: 18%;
+      display: block;
+      bottom: 15%;
+      left: 8%; }
+      header .bullet-one img {
+        animation-duration: 10s;
+        animation-name: floating;
+        animation-iteration-count: infinite;
+        width: 100%;
+        transform: rotate(-90deg);
+        filter: blur(3px); }
+    header .bullet-two {
+      width: 10%;
+      display: block;
+      top: 15%;
+      right: 15%; }
+      header .bullet-two img {
+        animation-duration: 8s;
+        animation-name: floating-two;
+        animation-iteration-count: infinite;
+        width: 100%;
+        filter: blur(2px); }
+    header .bullet-three {
+      width: 5%;
+      bottom: 30%;
+      right: 20%; }
+      header .bullet-three img {
+        animation-duration: 8s;
+        animation-name: floating-two;
+        animation-iteration-count: infinite;
+        width: 100%;
+        transform: rotate(-120deg); }
+  @media only screen and (max-width: 320px) {
+    header .bullet {
+      display: none; } }
+  @media only screen and (max-width: 568px) {
+    header .bullet {
+      display: none; } }
 
 .main {
   display: flex;
   justify-content: center;
-  align-items: center;
-}
+  align-items: center; }
 
 .carousel {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(../../dist/assets/carousel-background.png);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../dist/assets/carousel-background.png);
   background-size: cover;
   background-position: center;
   width: 100%;
   height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;
-}
-.carousel-container {
-  display: flex;
-  width: fit-content;
-  height: fit-content;
-}
-.carousel-arrow {
-  background-image: url(../../dist/assets/arrows.svg);
-  width: 40px;
-  height: 40px;
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  filter: invert(1);
-  cursor: pointer;
-}
-.carousel-arrow-left {
-  transform: rotate(180deg);
-}
-.carousel-image {
-  max-height: 20rem;
-  display: none;
-}
-.carousel-images {
-  overflow: hidden;
-  max-height: 20rem;
-}
-.carousel-image-active {
-  display: inline;
-}
-.carousel-dot {
-  width: 10px;
-  height: 10px;
-  background-color: white;
-  border-radius: 50%;
-  filter: brightness(50%);
-  margin: 0.3rem 0.4rem;
-}
-.carousel-dot-active {
-  filter: brightness(100%);
-}
-.carousel-dot:hover {
-  filter: brightness(100%);
-  cursor: pointer;
-}
-.carousel-dots {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.carousel-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-}
-.carousel-section-left {
-  width: 60%;
-}
-.carousel-section-right {
-  flex-direction: column;
-  width: 40%;
-  text-align: justify;
-  justify-content: flex-start;
-  align-items: flex-start;
-}
-.carousel-heading {
-  margin: 2rem 0;
-  text-transform: uppercase;
-  font-size: 2rem;
-  font-weight: bold;
-}
-.carousel-paragraph {
-  width: 80%;
-  color: #ffffff;
-  font-weight: 300;
-}
-.carousel-body {
-  display: flex;
-  flex-direction: column;
-  margin: 1rem;
-}
+  align-items: center; }
+  .carousel-container {
+    display: flex;
+    width: fit-content;
+    height: fit-content; }
+  .carousel-arrow {
+    background-image: url(../../dist/assets/arrows.svg);
+    width: 40px;
+    height: 40px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    filter: invert(1);
+    cursor: pointer; }
+    .carousel-arrow-left {
+      transform: rotate(180deg); }
+  .carousel-image {
+    max-height: 20rem;
+    display: none; }
+    .carousel-images {
+      overflow: hidden;
+      max-height: 20rem; }
+    .carousel-image-active {
+      display: inline; }
+  .carousel-dot {
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    filter: brightness(50%);
+    margin: 0.3rem 0.4rem; }
+    .carousel-dot-active {
+      filter: brightness(100%); }
+    .carousel-dot:hover {
+      filter: brightness(100%);
+      cursor: pointer; }
+    .carousel-dots {
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+  .carousel-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white; }
+    .carousel-section-left {
+      width: 60%; }
+    .carousel-section-right {
+      flex-direction: column;
+      width: 40%;
+      text-align: justify;
+      justify-content: flex-start;
+      align-items: flex-start; }
+  .carousel-heading {
+    margin: 2rem 0;
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: bold; }
+  .carousel-paragraph {
+    width: 80%;
+    color: #ffffff;
+    font-weight: 300; }
+  .carousel-body {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem; }
 
 /* operator */
 .operator {
   height: 100vh;
   width: 100%;
   padding-top: 40px;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../assets/operator/wp.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/operator/wp.jpg");
   background-position: center;
-  background-size: cover;
-}
+  background-size: cover; }
 
 .operator__carousel {
   position: relative;
   height: 80vh;
   width: 70%;
   margin: 0 auto;
-  /* border: solid black 4px; */
-}
+  /* border: solid black 4px; */ }
 
 .operator__carousel__image {
   width: 100%;
   height: 100%;
-  object-fit: contain;
-}
+  object-fit: contain; }
 
 .operator__carousel__track-container {
   /* background: lightblue; */
   height: 100%;
   position: relative;
-  overflow: hidden;
-}
+  overflow: hidden; }
 
 .operator__carousel__track {
   padding: 0;
@@ -320,15 +260,13 @@ header .bullet-three img {
   list-style: none;
   position: relative;
   height: 100%;
-  transition: transform 250ms ease-in;
-}
+  transition: transform 250ms ease-in; }
 
 .operator__carousel__slide {
   position: absolute;
   top: 0;
   bottom: 0;
-  width: 100%;
-}
+  width: 100%; }
 
 .operator__carousel__button {
   position: absolute;
@@ -336,27 +274,22 @@ header .bullet-three img {
   transform: translateY(-50%);
   border: 0;
   background: transparent;
-  cursor: pointer;
-}
+  cursor: pointer; }
 
 .operator__carousel__button--left {
-  left: -40px;
-}
+  left: -40px; }
 
 .operator__carousel__button--right {
-  right: -40px;
-}
+  right: -40px; }
 
 .operator__carousel__button img {
   width: 22px;
-  height: 30px;
-}
+  height: 30px; }
 
 .operator__carousel__nav {
   display: flex;
   justify-content: center;
-  padding-top: 30px;
-}
+  padding-top: 30px; }
 
 .operator__carousel__indicator1 {
   border: solid black 5px;
@@ -365,8 +298,8 @@ header .bullet-three img {
   background-image: url("../assets/operator/logoBlackbeard.png");
   background-size: cover;
   margin: 0 12px;
-  cursor: pointer;
-}
+  cursor: pointer; }
+
 .operator__carousel__indicator2 {
   border: solid black 4px;
   width: 80px;
@@ -374,8 +307,8 @@ header .bullet-three img {
   background-image: url("../assets/operator/logoBuck.png");
   background-size: cover;
   margin: 0 12px;
-  cursor: pointer;
-}
+  cursor: pointer; }
+
 .operator__carousel__indicator3 {
   border: solid black 4px;
   width: 80px;
@@ -383,8 +316,8 @@ header .bullet-three img {
   background-image: url("../assets/operator/logoCaveira.png");
   background-size: cover;
   margin: 0 12px;
-  cursor: pointer;
-}
+  cursor: pointer; }
+
 .operator__carousel__indicator4 {
   border: solid black 4px;
   width: 80px;
@@ -392,8 +325,8 @@ header .bullet-three img {
   background-image: url("../assets/operator/logoGlaz.png");
   background-size: cover;
   margin: 0 12px;
-  cursor: pointer;
-}
+  cursor: pointer; }
+
 .operator__carousel__indicator5 {
   border: solid black 4px;
   width: 80px;
@@ -402,69 +335,50 @@ header .bullet-three img {
   background-size: contain;
   background-repeat: no-repeat;
   margin: 0 12px;
-  cursor: pointer;
-}
+  cursor: pointer; }
 
 .operator__current-slide {
-  border-color: green;
-}
+  border-color: green; }
 
 .operator__is-hidden {
-  display: none;
-}
+  display: none; }
 
 @media (min-width: 320px) and (max-width: 640px) {
   .operator__carousel {
     height: 180px;
-    width: 80%;
-  }
-
+    width: 80%; }
   .operator__carousel__indicator1 {
     width: 80px;
-    height: 50px;
-  }
+    height: 50px; }
   .operator__carousel__indicator2 {
     width: 80px;
-    height: 50px;
-  }
+    height: 50px; }
   .operator__carousel__indicator3 {
     width: 80px;
-    height: 50px;
-  }
+    height: 50px; }
   .operator__carousel__indicator4 {
     width: 80px;
-    height: 50px;
-  }
+    height: 50px; }
   .operator__carousel__indicator5 {
     width: 80px;
-    height: 50px;
-  }
-}
+    height: 50px; } }
 
 @media (min-width: 641px) and (max-width: 961px) {
   .operator__carousel {
     height: 340px;
-    width: 80%;
-  }
-
+    width: 80%; }
   .operator__carousel__indicator1 {
     width: 90px;
-    height: 70px;
-  }
+    height: 70px; }
   .operator__carousel__indicator2 {
     width: 90px;
-    height: 70px;
-  }
+    height: 70px; }
   .operator__carousel__indicator3 {
     width: 90px;
-    height: 70px;
-  }
+    height: 70px; }
   .operator__carousel__indicator4 {
     width: 90px;
-    height: 70px;
-  }
+    height: 70px; }
   .operator__carousel__indicator5 {
     width: 90px;
-    height: 70px;
-  }
-}
+    height: 70px; } }

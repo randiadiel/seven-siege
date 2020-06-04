@@ -36,20 +36,19 @@
     &-right {
     }
   }
-  
-    &-image{
-      max-height: 20rem;
-      display: none;
-      &s{
-        overflow: hidden;
-      max-height: 20rem;
-      }
 
-      &-active{
-          display: inline;
-      }
+  &-image {
+    max-height: 20rem;
+    display: none;
+    &s {
+      overflow: hidden;
+      max-height: 20rem;
     }
-  
+
+    &-active {
+      display: inline;
+    }
+  }
 
   &-dot {
     width: $DotSize;
@@ -59,11 +58,9 @@
     filter: brightness(50%);
     margin: 0.3rem 0.4rem;
 
-  
-      &-active{
-        filter: brightness(100%);
-
-      }
+    &-active {
+      filter: brightness(100%);
+    }
     &:hover {
       filter: brightness(100%);
       cursor: pointer;
