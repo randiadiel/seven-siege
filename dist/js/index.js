@@ -142,6 +142,8 @@ $(document).ready(function ($) {
   //operator
   const track = document.querySelector(".operator__carousel__track");
   const slides = Array.from(track.children);
+  const desc = document.querySelector(".operator__carousel__desc");
+  const descSlide = Array.from(desc.children);
   const nextButton = document.querySelector(
     ".operator__carousel__button--right"
   );
@@ -152,12 +154,18 @@ $(document).ready(function ($) {
   const dots = Array.from(dotsNav.children);
 
   const slideWidth = slides[0].getBoundingClientRect().width;
+  const descWidth = descSlide[0].getBoundingClientRect().width;
 
   const setSlidePosition = (slide, index) => {
     slide.style.left = slideWidth * index + "px";
   };
 
+  const setDescSlidePosition = (descSlide, index) => {
+    descSlide.style.left = descWidth * index + "px";
+  };
+
   slides.forEach(setSlidePosition);
+  descSlide.forEach(setDescSlidePosition);
 
   const moveToSlide = (track, currentSlide, targetSlide) => {
     track.style.transform = "translateX(-" + targetSlide.style.left + ")";
@@ -165,7 +173,14 @@ $(document).ready(function ($) {
     targetSlide.classList.add("operator__current-slide");
   };
 
+  const moveToDescSlide = (desc, currentDescSlide, targetDesc) => {
+    desc.style.transform = "translateX(-" + targetDesc.style.left + ")";
+    currentDescSlide.classList.remove("operator__current-DescSlide");
+    targetDesc.classList.add("operator__current-DescSlide");
+  };
+
   const updateDots = (currentDot, targetDot) => {
+    console.log("test");
     currentDot.classList.remove("operator__current-slide");
     targetDot.classList.add("operator__current-slide");
   };
@@ -190,7 +205,10 @@ $(document).ready(function ($) {
     const currentDot = dotsNav.querySelector(".operator__current-slide");
     const prevDot = currentDot.previousElementSibling;
     const prevIndex = slides.findIndex((slide) => slide === prevSlide);
+    const currentDescSlide = desc.querySelector(".operator__current-DescSlide");
+    const prevDescSlide = currentDescSlide.previousElementSibling;
     moveToSlide(track, currentSlide, prevSlide);
+    moveToDescSlide(desc, currentDescSlide, prevDescSlide);
     updateDots(currentDot, prevDot);
     hideShowArrows(slides, prevButton, nextButton, prevIndex);
   });
@@ -201,7 +219,10 @@ $(document).ready(function ($) {
     const currentDot = dotsNav.querySelector(".operator__current-slide");
     const nextDot = currentDot.nextElementSibling;
     const nextIndex = slides.findIndex((slide) => slide === nextSlide);
+    const currentDescSlide = desc.querySelector(".operator__current-DescSlide");
+    const nextDescSlide = currentDescSlide.nextElementSibling;
     moveToSlide(track, currentSlide, nextSlide);
+    moveToDescSlide(desc, currentDescSlide, nextDescSlide);
     updateDots(currentDot, nextDot);
     hideShowArrows(slides, prevButton, nextButton, nextIndex);
   });
@@ -215,8 +236,10 @@ $(document).ready(function ($) {
     const currentDot = dotsNav.querySelector(".operator__current-slide");
     const targetIndex = dots.findIndex((dot) => dot === targetDot);
     const targetSlide = slides[targetIndex];
-
+    const targetDescSlide = descSlide[targetIndex];
+    const currentDescSlide = desc.querySelector(".operator__current-DescSlide");
     moveToSlide(track, currentSlide, targetSlide);
+    moveToDescSlide(desc, currentDescSlide, targetDescSlide);
     updateDots(currentDot, targetDot);
     hideShowArrows(slides, prevButton, nextButton, targetIndex);
   });

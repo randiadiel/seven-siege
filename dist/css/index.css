@@ -231,15 +231,15 @@ header {
 .operator {
   height: 100vh;
   width: 100%;
-  padding-top: 40px;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/operator/wp.jpg");
   background-position: center;
   background-size: cover; }
 
 .operator__carousel {
+  padding-top: 80px;
   position: relative;
-  height: 80vh;
-  width: 70%;
+  height: 60vh;
+  width: 50%;
   margin: 0 auto;
   /* border: solid black 4px; */ }
 
@@ -268,31 +268,53 @@ header {
   bottom: 0;
   width: 100%; }
 
+.operator__carousel__desc-container {
+  /* background: lightblue; */
+  margin-top: 20px;
+  height: 15%;
+  width: 100%;
+  position: relative;
+  overflow: hidden; }
+
+.operator__carousel__desc {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  position: relative;
+  height: 50%;
+  transition: transform 250ms ease-in; }
+
+.operator__carousel__descSlide {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%; }
+
+p {
+  color: #ffffff;
+  font-weight: 300; }
+
 .operator__carousel__button {
   position: absolute;
-  width: 40px;
-  height: 40px;
-  top: 50%;
+  top: 60%;
   transform: translateY(-50%);
+  border: 0;
   background: transparent;
-  background-image: url(../../dist/assets/arrows.svg);
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  cursor: pointer;
-  filter: invert(1);
-  border: 0; }
+  cursor: pointer; }
 
 .operator__carousel__button--left {
-  left: -40px;
+  left: -55px;
   transform: rotate(180deg); }
 
 .operator__carousel__button--right {
-  right: -40px; }
+  right: -55px; }
 
 .operator__carousel__button img {
-  width: 22px;
-  height: 30px; }
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  filter: invert(1);
+  border: 0; }
 
 .operator__carousel__nav {
   display: flex;
