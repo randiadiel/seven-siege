@@ -98,8 +98,8 @@ $(document).ready(function ($) {
       .classList.remove("carousel-image-active");
   };
   const changeEventContent = (index) => {
-    $(".carousel-heading").html(eventContent[index].title);
-    $(".carousel-paragraph").html(eventContent[index].content);
+    $("#carousel-heading").html(eventContent[index].title);
+    $("#carousel-paragraph").html(eventContent[index].content);
   };
 
   const getActiveItemIndex = () => {
@@ -182,8 +182,8 @@ $(document).ready(function ($) {
   };
 
   const changeEventContentMaps = (index) => {
-    $("#carousel-heading").html(mapsContent[index].title);
-    $("#carousel-paragraph").html(mapsContent[index].content);
+    $("#carousel-heading-maps").html(mapsContent[index].title);
+    $("#carousel-paragraph-maps").html(mapsContent[index].content);
   };
 
   const getActiveItemIndexMaps = () => {
@@ -207,7 +207,7 @@ $(document).ready(function ($) {
 
   $("#arrow-prev-maps").click((e) => {
     const index = getActiveItemIndexMaps();
-    if (index == 0) {
+    if (index == 1) {
       return;
     } else {
       activateCarouselItemMaps(index - 1);
