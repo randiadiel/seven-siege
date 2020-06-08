@@ -7,6 +7,10 @@
     url("../assets/operator/wp.jpg");
   background-position: center;
   background-size: cover;
+
+  display: flex;
+  justify-content: center;
+  align-content: center;
 }
 
 .operator__carousel {
@@ -75,6 +79,7 @@
 p {
   color: #ffffff;
   font-weight: 300;
+  text-align: center;
 }
 
 .operator__carousel__button {
@@ -164,31 +169,32 @@ p {
   display: none;
 }
 
-@media (min-width: 320px) and (max-width: 640px) {
+@media (max-width: 1024px) {
   .operator__carousel {
-    height: 180px;
-    width: 80%;
+    height: 50vh;
+    width: 70%;
+    padding-top: 120px;
   }
 
   .operator__carousel__indicator1 {
-    width: 80px;
-    height: 50px;
+    width: 100px;
+    height: 95px;
   }
   .operator__carousel__indicator2 {
-    width: 80px;
-    height: 50px;
+    width: 100px;
+    height: 95px;
   }
   .operator__carousel__indicator3 {
-    width: 80px;
-    height: 50px;
+    width: 100px;
+    height: 95px;
   }
   .operator__carousel__indicator4 {
-    width: 80px;
-    height: 50px;
+    width: 100px;
+    height: 95px;
   }
   .operator__carousel__indicator5 {
-    width: 80px;
-    height: 50px;
+    width: 100px;
+    height: 95px;
   }
 }
 
