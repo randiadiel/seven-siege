@@ -1,20 +1,14 @@
-.main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .carousel {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url(../../dist/assets/carousel-background.png);
   background-size: cover;
   background-position: center;
   width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  min-height: 100vh;
+  padding: $page-padding;
+  @include centerized-flex;
   position: relative;
+  box-sizing: border-box;
 
   &-container {
     display: flex;
@@ -22,7 +16,7 @@
     height: fit-content;
   }
 
-  @include mobile{
+  @include mobile {
     &-container {
       position: absolute;
       top: 1rem;
@@ -30,11 +24,10 @@
     }
   }
 
-  @include tablet{
+  @include tablet {
     &-container {
       @include centerized-flex;
       flex-direction: column;
-
     }
   }
 
@@ -53,46 +46,43 @@
     &-right {
     }
 
-    @include mobile{
-      &-left{
+    @include mobile {
+      &-left {
         left: 4rem;
       }
 
-      &-right{
+      &-right {
         right: 4rem;
       }
     }
   }
 
-  @include mobile{
-    &-arrow{
+  @include mobile {
+    &-arrow {
       width: $ArrowSize - 10px;
       height: $ArrowSize - 10px;
       position: absolute;
     }
   }
-  
-  
 
-  &-image{
+  &-image {
     max-height: 20rem;
     display: none;
-    &s{
+    &s {
       overflow: hidden;
-    max-height: 20rem;
+      max-height: 20rem;
     }
 
-    &-active{
-        display: inline;
+    &-active {
+      display: inline;
     }
   }
 
-  @include mobile{
-    &-image{
+  @include mobile {
+    &-image {
       width: 90vw;
     }
   }
-  
 
   &-dot {
     width: $DotSize;
@@ -102,11 +92,10 @@
     filter: brightness(30%);
     margin: 0.3rem 0.4rem;
 
-      &-active{
-        filter: brightness(100%);
+    &-active {
+      filter: brightness(100%);
+    }
 
-      }
-      
     &:hover {
       filter: brightness(100%);
       cursor: pointer;
@@ -135,7 +124,7 @@
       align-items: flex-start;
     }
 
-    @include mobile{
+    @include mobile {
       @include centerized-flex;
       padding: 0rem 3rem;
     }
@@ -152,11 +141,10 @@
     width: 80%;
     color: #ffffff;
     font-weight: 300;
-    
   }
 
-  @include mobile{
-    &-paragraph{
+  @include mobile {
+    &-paragraph {
       width: 65%;
     }
   }

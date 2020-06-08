@@ -21,7 +21,12 @@ body {
   height: 100%;
 }
 
+.main {
+  box-sizing: border-box;
+}
+
 @import "./mixin";
 @import "./variable";
 @import "./index";
 @import "./event";
+@import "./pre-order";
