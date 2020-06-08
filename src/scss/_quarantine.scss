@@ -1,0 +1,33 @@
+.quarantine{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 2rem;
+    &-heading{
+        margin-top: 1rem;
+        &-sub{
+            margin: 1rem 0; 
+
+        }
+    }
+
+    &-image{
+        margin-right : 1rem;
+        & > img{
+        height: 20rem;
+        }
+    }
+    
+    &-content{
+        display: flex;
+    }
+
+    &-date{
+        @include centerized-flex;
+        flex-direction: column;
+        background-color: $NavbarColor;
+        margin: 1rem auto;
+        padding: 1rem 2rem;
+        border-radius: 0.4rem;
+        color: white;
+    }
+}

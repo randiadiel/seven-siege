@@ -20,7 +20,7 @@
 }
 
 #navbar {
-  background-color: #333;
+  background-color: $NavbarColor;
   position: fixed;
   top: -50px;
   width: 100vw;
@@ -95,7 +95,7 @@ header {
       font-family: "Montserrat-Bold";
       color: black;
       text-decoration: none;
-      background-color: #eebe36;
+      background-color: $ButtonColor;
       border: none;
       padding: 0.7rem 1.5rem;
       border-radius: 0.5rem;
