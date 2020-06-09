@@ -8,14 +8,41 @@
   </head>
 
   <body id="mousearea">
-    <nav id="navbar">
+    <!-- <nav id="navbar">
       <img src="../dist/assets/logo/logo.png" alt="seven-siege-logo" />
       <span class="navbar-content">
         <a href="#home">Home</a>
         <a href="#event">Event</a>
         <a href="#maps">Maps</a>
       </span>
+    </nav> -->
+
+    <nav class="nav">
+      <div class="logo">
+        <img
+          src="../dist/assets/logo/logo.png"
+          alt="logo"
+          class="logo-content"
+        />
+      </div>
+      <label for="nav-box" class="nav-button">
+        <span class="nav-bar nav-bar-1">&nbsp;</span>
+        <span class="nav-bar nav-bar-2">&nbsp;</span>
+        <span class="nav-bar nav-bar-3">&nbsp;</span>
+      </label>
+      <ul class="nav-list">
+        <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="#event" class="nav-link">Events</a></li>
+        <li class="nav-item"><a href="#maps" class="nav-link">Maps</a></li>
+        <li class="nav-item">
+          <a href="#quarantine" class="nav-link">Quarantine</a>
+        </li>
+        <li class="nav-item">
+          <a href="#operators" class="nav-link">Operators</a>
+        </li>
+      </ul>
     </nav>
+
     <header id="home">
       <video autoplay muted loop id="myVideo">
         <source
@@ -79,6 +106,7 @@
           </div>
         </div>
       </div>
+
       <div id="maps" class="carousel">
         <div class="carousel-container">
           <div class="carousel-section carousel-section-left">
@@ -108,6 +136,7 @@
           </div>
         </div>
       </div>
+
       <div id="pre-order" class="pre-order">
         <div class="pre-order-overlay"></div>
         <div class="pre-order-container">
@@ -119,6 +148,7 @@
                   id="pre-order-username"
                   name="username"
                   type="text"
+                  autocomplete="username"
                   required
                 />
                 <label for="pre-order-username">Username</label>
@@ -130,8 +160,9 @@
               <div class="form-control">
                 <input
                   id="pre-order-password"
-                  name="new-password"
+                  name="password"
                   type="password"
+                  autocomplete="new-password"
                   required
                 />
                 <label for="pre-order-password">Password</label>
@@ -191,123 +222,148 @@
           </div>
         </div>
       </div>
-    </main>
 
-    <script type="module" src="../dist/js/index.js"></script>
-  </body>
-  </main>
-
-    <div class="operator">
-      <div class="operator__carousel">
-        <button
-          class="operator__carousel__button operator__carousel__button--left operator__is-hidden"
-        >
-          <img src="../dist/assets/arrows.svg" alt="arrow" />
-        </button>
-        <div class="operator__carousel__track-container">
-          <ul class="operator__carousel__track">
-            <li class="operator__carousel__slide operator__current-slide">
-              <img
-                class="operator__carousel__image"
-                src="../dist/assets/operator/BLACKBEARD.jpg"
-                alt="blackbeard"
-              />
-            </li>
-            <li class="operator__carousel__slide">
-              <img
-                class="operator__carousel__image"
-                src="../dist/assets/operator/BUCK.jpg"
-                alt="buck"
-              />
-            </li>
-            <li class="operator__carousel__slide">
-              <img
-                class="operator__carousel__image"
-                src="../dist/assets/operator/CAVEIRA.jpg"
-                alt="caveira"
-              />
-            </li>
-            <li class="operator__carousel__slide">
-              <img
-                class="operator__carousel__image"
-                src="../dist/assets/operator/GLAZ.jpg"
-                alt="glaz"
-              />
-            </li>
-            <li class="operator__carousel__slide">
-              <img
-                class="operator__carousel__image"
-                src="../dist/assets/operator/VALKYRIE.jpg"
-                alt="valkyrie"
-              />
-            </li>
-          </ul>
+      <div class="quarantine" id="quarantine">
+        <h2 class="quarantine-heading">
+          Quarantine Update
+        </h2>
+        <h5 class="quarantine-heading-sub">
+          This new mode pack a lot of new content!
+        </h5>
+        <div class="quarantine-content">
+          <div class="quarantine-image">
+            <img
+              src="../dist/assets/quarantine_image.jpg"
+              alt="quarantine-image"
+            />
+          </div>
+          <div class="quarantine-paragraph">
+            Quarantine seemingly centers around the same alien parasite featured
+            in Outbreak, where a USSR space capsule crash lands in Truth or
+            Consequences, New Mexico, and a quarantine is established to contain
+            the epidemic. The virus triggers a variety of infected forms,
+            defined by crystalline structures protruding from the body, and each
+            corresponding to enemy classes in gameplay.
+          </div>
         </div>
-        <div class="operator__carousel__desc-container">
-          <ul class="operator__carousel__desc">
-            <li
-              class="operator__carousel__descSlide operator__current-DescSlide"
-            >
-              <p>
-                A Medium Armored Operator, Blackbeard's unique gadgets are his
-                two Transparent Armored Rifle-Shields (TARS). These shields have
-                50 HP each. They protect his head from a few bullets, allowing a
-                slightly higher survivability rate at the cost of mobility and
-                recoil control.
-              </p>
-            </li>
-            <li class="operator__carousel__descSlide">
-              <p>
-                A Medium Armored Operator, Buck's unique gadget is an
-                underbarrel shotgun mounted under his weapon known as the
-                "Skeleton Key", otherwise designated as the SK 4-12. The shotgun
-                has a higher destructive potential than any of the other
-                shotguns.
-              </p>
-            </li>
-            <li class="operator__carousel__descSlide">
-              <p>
-                A Light Armored Operator, Caveira possesses the "Silent Step"
-                skill, which enables her to sneak up on enemies to immobilize
-                them. Once they are down for the count, she can "Interrogate"
-                them to reveal their teammates' locations.
-              </p>
-            </li>
-            <li class="operator__carousel__descSlide">
-              <p>
-                A Medium Armored Operator, Glaz's unique gadget is an HDS Flip
-                Sight for his OTs-03 marksman rifle. Whilst Aiming Down Sights
-                with it, it also comes with a Thermal Feedback System which can
-                outline long-range marks even through smoke for easier shooting.
-              </p>
-            </li>
-            <li class="operator__carousel__descSlide">
-              <p>
-                A Medium Armored Operator, Valkyrie's unique gadgets are three
-                Mk2 "Black Eye" Gyro Cams, portable sticky cameras that can
-                attach on almost any surface for increased surveillance.
-              </p>
-            </li>
-          </ul>
-        </div>
-        <button
-          class="operator__carousel__button operator__carousel__button--right"
-        >
-          <img src="../dist/assets/arrows.svg" alt="arrow" />
-        </button>
-        <div class="operator__carousel__nav">
-          <button
-            class="operator__carousel__indicator1 operator__current-slide"
-          ></button>
-          <button class="operator__carousel__indicator2"></button>
-          <button class="operator__carousel__indicator3"></button>
-          <button class="operator__carousel__indicator4"></button>
-          <button class="operator__carousel__indicator5"></button>
+        <div class="quarantine-date">
+          <h2>Release date</h2>
+          <time datetime="2021-02-14 13:00">14-02-2021</time>
         </div>
       </div>
-    </div>
 
-    
-    <script type="module" src="../dist/js/index.js"></script>
+      <div class="operator" id="operators">
+        <div class="operator__carousel">
+          <button
+            class="operator__carousel__button operator__carousel__button--left operator__is-hidden"
+          >
+            <img src="../dist/assets/arrows.svg" alt="arrow" />
+          </button>
+          <div class="operator__carousel__track-container">
+            <ul class="operator__carousel__track">
+              <li class="operator__carousel__slide operator__current-slide">
+                <img
+                  class="operator__carousel__image"
+                  src="../dist/assets/operator/BLACKBEARD.jpg"
+                  alt="blackbeard"
+                />
+              </li>
+              <li class="operator__carousel__slide">
+                <img
+                  class="operator__carousel__image"
+                  src="../dist/assets/operator/BUCK.jpg"
+                  alt="buck"
+                />
+              </li>
+              <li class="operator__carousel__slide">
+                <img
+                  class="operator__carousel__image"
+                  src="../dist/assets/operator/CAVEIRA.jpg"
+                  alt="caveira"
+                />
+              </li>
+              <li class="operator__carousel__slide">
+                <img
+                  class="operator__carousel__image"
+                  src="../dist/assets/operator/GLAZ.jpg"
+                  alt="glaz"
+                />
+              </li>
+              <li class="operator__carousel__slide">
+                <img
+                  class="operator__carousel__image"
+                  src="../dist/assets/operator/VALKYRIE.jpg"
+                  alt="valkyrie"
+                />
+              </li>
+            </ul>
+          </div>
+          <div class="operator__carousel__desc-container">
+            <ul class="operator__carousel__desc">
+              <li
+                class="operator__carousel__descSlide operator__current-DescSlide"
+              >
+                <p>
+                  A Medium Armored Operator, Blackbeard's unique gadgets are his
+                  two Transparent Armored Rifle-Shields (TARS). These shields
+                  have 50 HP each. They protect his head from a few bullets,
+                  allowing a slightly higher survivability rate at the cost of
+                  mobility and recoil control.
+                </p>
+              </li>
+              <li class="operator__carousel__descSlide">
+                <p>
+                  A Medium Armored Operator, Buck's unique gadget is an
+                  underbarrel shotgun mounted under his weapon known as the
+                  "Skeleton Key", otherwise designated as the SK 4-12. The
+                  shotgun has a higher destructive potential than any of the
+                  other shotguns.
+                </p>
+              </li>
+              <li class="operator__carousel__descSlide">
+                <p>
+                  A Light Armored Operator, Caveira possesses the "Silent Step"
+                  skill, which enables her to sneak up on enemies to immobilize
+                  them. Once they are down for the count, she can "Interrogate"
+                  them to reveal their teammates' locations.
+                </p>
+              </li>
+              <li class="operator__carousel__descSlide">
+                <p>
+                  A Medium Armored Operator, Glaz's unique gadget is an HDS Flip
+                  Sight for his OTs-03 marksman rifle. Whilst Aiming Down Sights
+                  with it, it also comes with a Thermal Feedback System which
+                  can outline long-range marks even through smoke for easier
+                  shooting.
+                </p>
+              </li>
+              <li class="operator__carousel__descSlide">
+                <p>
+                  A Medium Armored Operator, Valkyrie's unique gadgets are three
+                  Mk2 "Black Eye" Gyro Cams, portable sticky cameras that can
+                  attach on almost any surface for increased surveillance.
+                </p>
+              </li>
+            </ul>
+          </div>
+          <button
+            class="operator__carousel__button operator__carousel__button--right"
+          >
+            <img src="../dist/assets/arrows.svg" alt="arrow" />
+          </button>
+          <div class="operator__carousel__nav">
+            <button
+              class="operator__carousel__indicator1 operator__current-slide"
+            ></button>
+            <button class="operator__carousel__indicator2"></button>
+            <button class="operator__carousel__indicator3"></button>
+            <button class="operator__carousel__indicator4"></button>
+            <button class="operator__carousel__indicator5"></button>
+          </div>
+        </div>
+      </div>
+
+      <script type="module" src="../dist/js/index.js"></script>
+    </main>
   </body>
 </html>
