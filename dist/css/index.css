@@ -456,7 +456,7 @@ p {
     width: 350px;
     padding-top: 180px; }
   .operator__carousel__button {
-    top: 70%; }
+    display: none; }
   .operator__carousel__desc-container {
     height: 10vh; }
   p {
