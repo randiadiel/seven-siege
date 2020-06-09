@@ -1,43 +1,167 @@
 .pre-order {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  .form-control {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    & label {
-      margin-top: 0.2rem;
-      margin-bottom: 0.2rem;
-    }
-    & input {
-      padding: 0.3rem;
-    }
-  }
-  .form-submit {
-    display: flex;
-    justify-content: center;
-  }
-  &-form {
-    width: 20rem;
-    &-submit {
-      margin-top: 1rem;
-      width: fit-content;
-      padding: 0.5rem;
-    }
-  }
-
+  @include centerized-flex;
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   background: #000000;
   color: #ffffff;
   padding: $page-padding;
   box-sizing: border-box;
-  &-heading {
-    text-align: center;
+  &-container {
+    position: relative;
+    width: 100%;
+    max-width: 1100px;
+    margin: 20px;
+    min-height: 600px;
+    background: #686866;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    & .formCol {
+      width: 50%;
+      @include centerized-flex;
+      & form {
+        position: relative;
+        width: 100%;
+        padding: 0 0 0 4rem;
+        & h2 {
+          font-family: "Montserrat-Bold";
+          color: $form-color;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          margin-bottom: 2rem;
+        }
+        & .form-control {
+          position: relative;
+          margin-bottom: 2rem;
+          & input,
+          textarea,
+          select {
+            position: relative;
+            background: transparent;
+            outline: none;
+            border: none;
+            width: 100%;
+            color: $form-color;
+            padding-bottom: 0.5rem;
+            letter-spacing: 1px;
+            border-bottom: 2px solid rgba($color: $form-color, $alpha: 0.5);
+            resize: none;
+            & option {
+              color: black;
+            }
+          }
+          & input:focus ~ label,
+          textarea:focus ~ label,
+          input:valid ~ label,
+          textarea:valid ~ label {
+            color: #eebe36;
+            transform: translateY(-1.5rem);
+            font-size: 14px;
+            font-weight: 700;
+          }
+          & input:focus,
+          textarea:focus,
+          input:valid,
+          textarea:valid {
+            border-bottom-color: $form-color;
+          }
+          & label {
+            position: absolute;
+            left: 0;
+            font-size: 16px;
+            font-weight: 300;
+            display: inline-block;
+            pointer-events: none;
+            letter-spacing: 1px;
+            color: rgba($color: $form-color, $alpha: 0.5);
+            transition: all 0.2s;
+          }
+        }
+        & .form-control:last-child {
+          margin-bottom: 0px;
+          & input {
+            background: $form-color;
+            padding: 0.5rem 1.2rem;
+            margin-top: -0.5rem;
+            width: fit-content;
+            cursor: pointer;
+            background: #eebe36;
+            color: #fff;
+            font-family: "Montserrat-Bold";
+            border: none;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+          }
+          & input:focus {
+            background: #e7aa02;
+          }
+        }
+        & .checkbox-control {
+          margin-bottom: 2rem;
+          display: block;
+          position: relative;
+          padding-left: 35px;
+          cursor: pointer;
+          user-select: none;
+          & input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+          }
+          & .checkmark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 1.2rem;
+            width: 1.2rem;
+            background-color: #eee;
+          }
+          & .checkmark:after {
+            left: 9px;
+            top: 5px;
+            width: 5px;
+            height: 10px;
+            border: solid white;
+            border-width: 0 3px 3px 0;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+          }
+          & input:checked {
+            & ~ .checkmark {
+              background-color: #eebe36;
+            }
+            & ~ .checkmark:after {
+              display: block;
+            }
+          }
+        }
+        .checkmark:after {
+          content: "";
+          position: absolute;
+          display: none;
+        }
+        & .checkbox-control:hover {
+          & input ~ .checkmark {
+            background-color: #ccc;
+          }
+        }
+      }
+    }
+    & .imgCol {
+      position: relative;
+      width: 50%;
+      height: 100%;
+      @include centerized-flex;
+      & img {
+        width: 90%;
+      }
+    }
   }
+
   &-overlay {
     position: absolute;
     z-index: 10;
