@@ -1,0 +1,39 @@
+.footer{
+    color: white;
+    background-color: $NavbarColor;
+    &-content{
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &-copyright{
+        margin-bottom: 0.5rem;
+    }
+
+    &-nav{
+        @include mobile{
+            font-size: 0.6rem;
+            display: flex;
+        
+        }
+        & > *{
+            border-right: 1px solid white;
+            padding : 0 1rem;
+            
+        }
+        &:nth-last-child(0){
+            border-right: none;
+        }
+    }
+
+    &-item{
+        &:link,&:visited{
+            color: inherit;
+            text-decoration: none;
+        }
+    }
+
+}

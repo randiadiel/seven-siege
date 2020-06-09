@@ -12,10 +12,12 @@
   font-size: $font-size-caption;
   padding: 0 8.5rem;
   z-index: 99;
+  transition: all 2s;
   & .logo {
     &-content {
       height: 50px;
       filter: invert(1);
+   
     }
   }
   &-input,
@@ -85,7 +87,9 @@
       &:checked + .nav {
         background-color: $color-secondary-black;
         position: relative;
-
+        & > .logo{
+          opacity: 0;
+        }
         & > .nav-button {
           position: absolute;
           top: 2.3rem;

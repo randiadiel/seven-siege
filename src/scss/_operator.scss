@@ -9,16 +9,16 @@
   background-size: cover;
 
   display: flex;
-  justify-content: center;
-  align-content: center;
+  align-items: center;
 }
 
 .operator__carousel {
-  padding-top: 40px;
+  padding-top: 80px;
   position: relative;
-  height: 60vh;
-  width: 750px;
+  height: 450px;
+  width: 700px;
   margin: 0 auto;
+  transform: translateY(-30%);
   /* border: solid black 4px; */
 }
 
@@ -54,7 +54,7 @@
 .operator__carousel__desc-container {
   /* background: lightblue; */
   margin-top: 20px;
-  height: 15%;
+  height: 90px;
   width: 100%;
   position: relative;
   overflow: hidden;
@@ -80,6 +80,7 @@ p {
   color: #ffffff;
   font-weight: 300;
   text-align: center;
+  font-size: large;
 }
 
 .operator__carousel__button {
@@ -112,7 +113,7 @@ p {
 .operator__carousel__nav {
   display: flex;
   justify-content: center;
-  padding-top: 30px;
+  padding-top: 20px;
 }
 
 .operator__carousel__indicator1 {
@@ -174,27 +175,23 @@ p {
   display: none;
 }
 
-@media (max-width: 991.98px) {
+@media (max-width: 1030px) {
   .operator__carousel {
-    height: 40vh;
-    width: 500px;
-    padding-top: 100px;
-  }
-
-  .operator__carousel__button--right {
-    transform: translateY(2px);
+    height: 550px;
+    width: 700px;
+    padding-top: 150px;
   }
 
   .operator__carousel__desc-container {
-    height: 10vh;
+    height: 60px;
   }
 
   p {
-    font-size: smaller;
+    font-size: medium;
   }
 
   .operator__carousel__nav {
-    padding-top: 10px;
+    padding-top: 20px;
   }
 
   .operator__carousel__indicator1 {
@@ -224,70 +221,23 @@ p {
   }
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 768px) {
   .operator__carousel {
-    height: 40vh;
-    width: 500px;
-    padding-top: 100px;
-  }
-  .operator__carousel__button--right {
-    transform: translateY(2px);
+    height: 260px;
+    width: 460px;
+    padding-top: 20px;
   }
 
-  .operator__carousel__desc-container {
-    height: 10vh;
-  }
-
-  p {
-    font-size: smaller;
-  }
-
-  .operator__carousel__nav {
-    padding-top: 10px;
-  }
-
-  .operator__carousel__indicator1 {
-    width: 70px;
-    height: 70px;
-    margin: 0 10px;
-  }
-  .operator__carousel__indicator2 {
-    width: 70px;
-    height: 70px;
-    margin: 0 10px;
-  }
-  .operator__carousel__indicator3 {
-    width: 70px;
-    height: 70px;
-    margin: 0 10px;
-  }
-  .operator__carousel__indicator4 {
-    width: 70px;
-    height: 70px;
-    margin: 0 10px;
-  }
-  .operator__carousel__indicator5 {
-    width: 70px;
-    height: 70px;
-    margin: 0 10px;
-  }
-}
-
-@media (max-width: 575.98px) {
-  .operator__carousel {
-    height: 30vh;
-    width: 350px;
-    padding-top: 180px;
-  }
   .operator__carousel__button {
     display: none;
   }
   .operator__carousel__desc-container {
-    height: 10vh;
+    height: 70px;
+    margin-top: 10px;
   }
 
   p {
-    font-size: x-small;
+    font-size: small;
   }
 
   .operator__carousel__nav {
@@ -295,28 +245,76 @@ p {
   }
 
   .operator__carousel__indicator1 {
-    width: 70px;
-    height: 50px;
+    width: 65px;
+    height: 60px;
     margin: 0 10px;
   }
   .operator__carousel__indicator2 {
-    width: 70px;
-    height: 50px;
+    width: 65px;
+    height: 60px;
     margin: 0 10px;
   }
   .operator__carousel__indicator3 {
-    width: 70px;
-    height: 50px;
+    width: 65px;
+    height: 60px;
     margin: 0 10px;
   }
   .operator__carousel__indicator4 {
-    width: 70px;
-    height: 50px;
+    width: 65px;
+    height: 60px;
     margin: 0 10px;
   }
   .operator__carousel__indicator5 {
-    width: 70px;
-    height: 50px;
+    width: 65px;
+    height: 60px;
+    margin: 0 10px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .operator__carousel {
+    height: 180px;
+    width: 300px;
+    padding-top: 10px;
+  }
+  .operator__carousel__button {
+    display: none;
+  }
+  .operator__carousel__desc-container {
+    height: 60px;
+  }
+
+  p {
+    font-size: xx-small;
+  }
+
+  .operator__carousel__nav {
+    padding-top: 0px;
+  }
+
+  .operator__carousel__indicator1 {
+    width: 37px;
+    height: 35px;
+    margin: 0 10px;
+  }
+  .operator__carousel__indicator2 {
+    width: 37px;
+    height: 35px;
+    margin: 0 10px;
+  }
+  .operator__carousel__indicator3 {
+    width: 37px;
+    height: 35px;
+    margin: 0 10px;
+  }
+  .operator__carousel__indicator4 {
+    width: 37px;
+    height: 35px;
+    margin: 0 10px;
+  }
+  .operator__carousel__indicator5 {
+    width: 37px;
+    height: 35px;
     margin: 0 10px;
   }
 }
