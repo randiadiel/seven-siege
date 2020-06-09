@@ -67,7 +67,7 @@ $(document).ready(function ($) {
   const initDots = (imageCount) => {
     for (let i = 1; i <= imageCount; i++) {
       document.getElementById("carousel-dot-list").innerHTML += `
-      <div class="carousel-dot" id="dot-${i}"></div>
+      <div class="carousel-dot dot-event" id="dot-${i}"></div>
       `;
     }
   };
@@ -136,13 +136,7 @@ $(document).ready(function ($) {
     changeEventContent(newActive - 1);
   };
 
-  $(".carousel-dot").click((e) => {
-    const newActivateIndex =
-      $(".carousel-dots").children(`#${e.target.id}`).index() + 1;
-    const oldActivateIndex =
-      $(".carousel-dots").children(`.carousel-dot-active`).index() + 1;
-    changeActive(newActivateIndex, oldActivateIndex);
-  });
+
 
   // maps carousel
 
@@ -150,7 +144,7 @@ $(document).ready(function ($) {
   const initDotsMaps = (mapsCount) => {
     for (let i = 1; i <= mapsCount; i++) {
       document.getElementById("carousel-dot-list-maps").innerHTML += `
-      <div class="carousel-dot" id="dot-maps-${i}"></div>
+      <div class="carousel-dot dot-map" id="dot-maps-${i}"></div>
       `;
     }
   };
@@ -222,13 +216,7 @@ $(document).ready(function ($) {
     changeEventContentMaps(newActive - 1);
   };
 
-  $(".carousel-dot").click((e) => {
-    const newActivateIndex =
-      $("carousel-dot-list-maps").children(`#${e.target.id}`).index() + 1;
-    const oldActivateIndex =
-      $("carousel-dot-list-maps").children(`.carousel-dot-active`).index() + 1;
-    changeActive(newActivateIndex, oldActivateIndex);
-  });
+
 
   //carousell all
 
@@ -351,4 +339,22 @@ $(document).ready(function ($) {
     updateDots(currentDot, targetDot);
     hideShowArrows(slides, prevButton, nextButton, targetIndex);
   });
+  
+  $(".dot-map").click((e) => {
+
+    const newActivateIndex =
+      $("#carousel-dot-list-maps").children(`#${e.target.id}`).index() + 1;
+    const oldActivateIndex =
+      $("#carousel-dot-list-maps").children(`.carousel-dot-active`).index() + 1;
+      changeActiveMaps(newActivateIndex, oldActivateIndex);
+  });
+
+  $(".dot-event").click((e) => {
+    const newActivateIndex =
+      $("#carousel-dot-list").children(`#${e.target.id}`).index() + 1;
+    const oldActivateIndex =
+      $("#carousel-dot-list").children(`.carousel-dot-active`).index() + 1;
+    changeActive(newActivateIndex, oldActivateIndex);
+  });
+
 });

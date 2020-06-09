@@ -321,6 +321,16 @@ header {
     cursor: pointer; }
     .carousel-arrow-left {
       transform: rotate(180deg); }
+  @media only screen and (max-width: 992px) {
+    .carousel-arrow {
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      top: 23rem; }
+      .carousel-arrow-left {
+        left: 2rem; }
+      .carousel-arrow-right {
+        right: 2rem; } }
   @media only screen and (max-width: 576px) {
     .carousel-arrow {
       width: 30px;
