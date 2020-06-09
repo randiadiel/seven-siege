@@ -8,14 +8,41 @@
   </head>
 
   <body id="mousearea">
-    <nav id="navbar">
+    <!-- <nav id="navbar">
       <img src="../dist/assets/logo/logo.png" alt="seven-siege-logo" />
       <span class="navbar-content">
         <a href="#home">Home</a>
         <a href="#event">Event</a>
         <a href="#maps">Maps</a>
       </span>
+    </nav> -->
+
+    <nav class="nav">
+      <div class="logo">
+        <img
+          src="../dist/assets/logo/logo.png"
+          alt="logo"
+          class="logo-content"
+        />
+      </div>
+      <label for="nav-box" class="nav-button">
+        <span class="nav-bar nav-bar-1">&nbsp;</span>
+        <span class="nav-bar nav-bar-2">&nbsp;</span>
+        <span class="nav-bar nav-bar-3">&nbsp;</span>
+      </label>
+      <ul class="nav-list">
+        <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="#event" class="nav-link">Events</a></li>
+        <li class="nav-item"><a href="#maps" class="nav-link">Maps</a></li>
+        <li class="nav-item">
+          <a href="#quarantine" class="nav-link">Quarantine</a>
+        </li>
+        <li class="nav-item">
+          <a href="#operators" class="nav-link">Operators</a>
+        </li>
+      </ul>
     </nav>
+
     <header id="home">
       <video autoplay muted loop id="myVideo">
         <source
@@ -225,7 +252,7 @@
         </div>
       </div>
 
-      <div class="operator">
+      <div class="operator" id="operators">
         <div class="operator__carousel">
           <button
             class="operator__carousel__button operator__carousel__button--left operator__is-hidden"
