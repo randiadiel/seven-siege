@@ -151,6 +151,18 @@
         }
       }
     }
+    @include tablet {
+      & .formCol {
+        width: 100%;
+        padding: 1rem 2rem;
+        & form {
+          width: 100%;
+          max-width: 500px;
+          padding: 0;
+        }
+      }
+    }
+
     & .imgCol {
       position: relative;
       width: 50%;
@@ -159,6 +171,12 @@
       & img {
         width: 90%;
       }
+    }
+  }
+
+  @include tablet {
+    & .imgCol {
+      display: none;
     }
   }
 
@@ -177,5 +195,16 @@
       rgba(0, 0, 0, 0.4) 65%,
       rgba(255, 255, 255, 0) 100%
     );
+  }
+  @include mobile {
+    &-overlay {
+      left: 0;
+    }
+  }
+}
+@include mobile {
+  $page-padding: 0;
+  .pre-order {
+    padding: $page-padding;
   }
 }

@@ -18,7 +18,6 @@
 
   @include mobile {
     &-container {
-      position: absolute;
       top: 1rem;
       flex-direction: column;
     }
@@ -52,7 +51,7 @@
       width: $ArrowSize - 10px;
       height: $ArrowSize - 10px;
       position: absolute;
-      top: 15rem;
+      top: 18rem;
       &-left {
         left: 4rem;
       }
@@ -142,7 +141,7 @@
 
   @include mobile {
     &-paragraph {
-      width: 65%;
+      margin-bottom: 3rem;
     }
   }
 
@@ -150,5 +149,13 @@
     display: flex;
     flex-direction: column;
     margin: 1rem;
+  }
+}
+
+@include mobile {
+  $page-padding: 0;
+  .carousel {
+    padding: 2rem $page-padding;
+    display: block;
   }
 }
