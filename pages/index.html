@@ -13,10 +13,10 @@
       <span class="navbar-content">
         <a href="#home">Home</a>
         <a href="#event">Event</a>
-        <a href="Maps">Maps</a>
+        <a href="#maps">Maps</a>
       </span>
     </nav>
-    <header>
+    <header id="home">
       <video autoplay muted loop id="myVideo">
         <source
           src="https://cdn.discordapp.com/attachments/717018339729211453/717024698696990831/bg_vid.mp4"
@@ -34,7 +34,7 @@
         <div id="home-navbar">
           <a href="#home">Home</a>
           <a href="#event">Event</a>
-          <a href="Maps">Maps</a>
+          <a href="#maps">Maps</a>
         </div>
         <a href="#pre-order" class="pre-order-button">Pre-Order Now!</a>
       </div>
@@ -50,7 +50,7 @@
     </header>
 
     <main class="main">
-      <div class="carousel">
+      <div id="event" class="carousel">
         <div class="carousel-container">
           <div class="carousel-section carousel-section-left">
             <span
@@ -79,7 +79,7 @@
           </div>
         </div>
       </div>
-      <div class="carousel">
+      <div id="maps" class="carousel">
         <div class="carousel-container">
           <div class="carousel-section carousel-section-left">
             <span
@@ -105,6 +105,89 @@
               inventore atque. Neque repellendus laudantium natus ipsam
               architecto unde non vel. Dolor!
             </div>
+          </div>
+        </div>
+      </div>
+      <div id="pre-order" class="pre-order">
+        <div class="pre-order-overlay"></div>
+        <div class="pre-order-container">
+          <div class="formCol">
+            <form action="/" class="pre-order-form">
+              <h2 class="pre-order-heading">Pre-Order Now!</h2>
+              <div class="form-control">
+                <input
+                  id="pre-order-username"
+                  name="username"
+                  type="text"
+                  required
+                />
+                <label for="pre-order-username">Username</label>
+              </div>
+              <div class="form-control">
+                <input id="pre-order-email" name="email" type="text" required />
+                <label for="pre-order-email">Email</label>
+              </div>
+              <div class="form-control">
+                <input
+                  id="pre-order-password"
+                  name="new-password"
+                  type="password"
+                  required
+                />
+                <label for="pre-order-password">Password</label>
+              </div>
+              <div class="form-control">
+                <textarea
+                  name="address"
+                  id="pre-order-address"
+                  cols="30"
+                  rows="4"
+                  required
+                ></textarea>
+                <label for="address">Address</label>
+              </div>
+              <div class="form-control">
+                <input
+                  id="pre-order-copies"
+                  name="copies"
+                  type="number"
+                  required
+                />
+                <label for="copies">How Many Copies</label>
+              </div>
+              <div class="form-control">
+                <select name="type" id="pre-order-type" required>
+                  <option value="Full Option">Full Option</option>
+                  <option value="Game Only">Game Only</option>
+                </select>
+              </div>
+              <div class="">
+                <label class="checkbox-control" for="pre-order-terms"
+                  >Accept our Terms and Condition
+                  <input
+                    type="checkbox"
+                    name="terms"
+                    id="pre-order-terms"
+                    required
+                  />
+                  <span class="checkmark"></span>
+                </label>
+              </div>
+              <div class="form-control">
+                <input
+                  class="pre-order-form-submit"
+                  type="submit"
+                  name="submit"
+                  id="pre-order-submit"
+                />
+              </div>
+            </form>
+          </div>
+          <div class="imgCol">
+            <img
+              src="../Assets/operators.png"
+              alt="Rainbow Six Siege Operators"
+            />
           </div>
         </div>
       </div>

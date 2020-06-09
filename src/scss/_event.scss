@@ -4,11 +4,11 @@
   background-size: cover;
   background-position: center;
   width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  min-height: 100vh;
+  padding: $page-padding;
+  @include centerized-flex;
   position: relative;
+  box-sizing: border-box;
 
   &-container {
     display: flex;
