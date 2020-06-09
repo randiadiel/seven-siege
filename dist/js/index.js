@@ -136,8 +136,6 @@ $(document).ready(function ($) {
     changeEventContent(newActive - 1);
   };
 
-
-
   // maps carousel
 
   const mapsCount = mapsContent.length;
@@ -215,8 +213,6 @@ $(document).ready(function ($) {
     deactivateCarouselItemMaps(oldActive);
     changeEventContentMaps(newActive - 1);
   };
-
-
 
   //carousell all
 
@@ -339,14 +335,13 @@ $(document).ready(function ($) {
     updateDots(currentDot, targetDot);
     hideShowArrows(slides, prevButton, nextButton, targetIndex);
   });
-  
-  $(".dot-map").click((e) => {
 
+  $(".dot-map").click((e) => {
     const newActivateIndex =
       $("#carousel-dot-list-maps").children(`#${e.target.id}`).index() + 1;
     const oldActivateIndex =
       $("#carousel-dot-list-maps").children(`.carousel-dot-active`).index() + 1;
-      changeActiveMaps(newActivateIndex, oldActivateIndex);
+    changeActiveMaps(newActivateIndex, oldActivateIndex);
   });
 
   $(".dot-event").click((e) => {
@@ -357,4 +352,30 @@ $(document).ready(function ($) {
     changeActive(newActivateIndex, oldActivateIndex);
   });
 
+  // After Form Submitted Validation
+  $("#pre-order-submit").click(function (event) {
+    var form_data = document.forms["pre-order-form"];
+    var error = null;
+
+    if (form_data["username"].value.length < 5) {
+      error = "Username length Must Be 5 or more";
+    } else if (form_data["address"].value.length < 10) {
+      error = "Address length mus be 10 or more";
+    } else if (form_data["email"].value.indexOf("@") < 1) {
+      error = "Email must have an @";
+    } else if (form_data["email"].value.indexOf(".com") < 1) {
+      error = "Email must have a .com";
+    } else if (form_data["terms"].checked == false) {
+      error = "You must accept our terms and condition";
+    }
+
+    if (error != null) {
+      event.preventDefault();
+      alert(error);
+    } else {
+      alert("Form will be submitted");
+    }
+  });
+
+  console.log(document.forms["pre-order-form"]);
 });
