@@ -1,0 +1,83 @@
+.quarantine {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 2rem;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../assets/quarantine_background.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: white;
+
+    @include tablet {
+        @include centerized-flex;
+    }
+
+    &-heading {
+        margin-top: 1rem;
+        font-family: 'Montserrat-Bold';
+
+        &-sub {
+            margin-top: 0.3rem;
+            margin-bottom: 2rem;
+        }
+    }
+
+    &-paragraph {
+        margin: 1rem 0;
+        text-align: justify;
+        padding: 1rem;
+        margin-left: 2rem;
+        line-height: 1.6;
+
+        @include tablet{
+            margin-left: 0;
+        }
+    }
+
+    &-image {
+        margin-right: 1rem;
+
+
+        @include tablet {
+            @include centerized-flex;
+
+        }
+
+        &>img {
+            height: 20rem;
+            box-shadow: 0 0 4.5rem rgba(255, 255, 255, 0.15);
+
+            @include tablet {
+                height: initial;
+                width: 80%;
+            }
+
+        }
+
+
+    }
+
+    &-content {
+        display: flex;
+
+        @include tablet {
+            flex-direction: column;
+        }
+    }
+
+    &-date {
+        @include centerized-flex;
+        flex-direction: column;
+        background-color: darken($NavbarColor, 5);
+        margin: 1rem auto;
+        margin-top: 2rem;
+        padding: 1rem 2rem;
+        border-radius: 0.4rem;
+        color: white;
+
+        &>time {
+            margin-top: 0.5rem;
+            letter-spacing: 1rem;
+        }
+    }
+}

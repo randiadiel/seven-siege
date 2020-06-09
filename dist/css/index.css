@@ -109,8 +109,7 @@ header {
       text-decoration: none;
       background-color: #eebe36;
       border: none;
-      padding: 0.7rem 1.5rem;
-      border-radius: 0.5rem; }
+      padding: 0.7rem 1.5rem; }
   header .bullet {
     position: absolute; }
     header .bullet-one {
@@ -149,7 +148,7 @@ header {
   @media only screen and (max-width: 992px) {
     header .bullet {
       display: none; } }
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 576px) {
     header .bullet {
       display: none; } }
 
@@ -169,7 +168,7 @@ header {
     display: flex;
     width: fit-content;
     height: fit-content; }
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 576px) {
     .carousel-container {
       top: 1rem;
       flex-direction: column; } }
@@ -190,7 +189,7 @@ header {
     cursor: pointer; }
     .carousel-arrow-left {
       transform: rotate(180deg); }
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 576px) {
     .carousel-arrow {
       width: 30px;
       height: 30px;
@@ -208,7 +207,7 @@ header {
       max-height: 20rem; }
     .carousel-image-active {
       display: inline; }
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 576px) {
     .carousel-image {
       width: 90vw; } }
   .carousel-dot {
@@ -239,7 +238,7 @@ header {
       text-align: justify;
       justify-content: flex-start;
       align-items: flex-start; }
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 576px) {
       .carousel-section {
         display: flex;
         justify-content: center;
@@ -253,7 +252,7 @@ header {
     width: 80%;
     color: #ffffff;
     font-weight: 300; }
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 576px) {
     .carousel-paragraph {
       margin-bottom: 3rem; } }
   .carousel-body {
@@ -261,7 +260,7 @@ header {
     flex-direction: column;
     margin: 1rem; }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 576px) {
   .carousel {
     padding: 2rem 0;
     display: block; } }
@@ -430,11 +429,11 @@ header {
     height: 100px;
     background: black;
     background: linear-gradient(0deg, black 0%, rgba(0, 0, 0, 0.6) 50%, rgba(0, 0, 0, 0.4) 65%, rgba(255, 255, 255, 0) 100%); }
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 576px) {
     .pre-order-overlay {
       left: 0; } }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 576px) {
   .pre-order {
     padding: 0; } }
 
@@ -694,3 +693,66 @@ p {
     width: 70px;
     height: 50px;
     margin: 0 10px; } }
+
+.quarantine {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 2rem;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../assets/quarantine_background.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: white; }
+  @media only screen and (max-width: 992px) {
+    .quarantine {
+      display: flex;
+      justify-content: center;
+      align-items: center; } }
+  .quarantine-heading {
+    margin-top: 1rem;
+    font-family: 'Montserrat-Bold'; }
+    .quarantine-heading-sub {
+      margin-top: 0.3rem;
+      margin-bottom: 2rem; }
+  .quarantine-paragraph {
+    margin: 1rem 0;
+    text-align: justify;
+    padding: 1rem;
+    margin-left: 2rem;
+    line-height: 1.6; }
+    @media only screen and (max-width: 992px) {
+      .quarantine-paragraph {
+        margin-left: 0; } }
+  .quarantine-image {
+    margin-right: 1rem; }
+    @media only screen and (max-width: 992px) {
+      .quarantine-image {
+        display: flex;
+        justify-content: center;
+        align-items: center; } }
+    .quarantine-image > img {
+      height: 20rem;
+      box-shadow: 0 0 4.5rem rgba(255, 255, 255, 0.15); }
+      @media only screen and (max-width: 992px) {
+        .quarantine-image > img {
+          height: initial;
+          width: 80%; } }
+  .quarantine-content {
+    display: flex; }
+    @media only screen and (max-width: 992px) {
+      .quarantine-content {
+        flex-direction: column; } }
+  .quarantine-date {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #262626;
+    margin: 1rem auto;
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    border-radius: 0.4rem;
+    color: white; }
+    .quarantine-date > time {
+      margin-top: 0.5rem;
+      letter-spacing: 1rem; }
