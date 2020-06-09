@@ -180,7 +180,6 @@ $(document).ready(function ($) {
   };
 
   const updateDots = (currentDot, targetDot) => {
-    console.log("test");
     currentDot.classList.remove("operator__current-slide");
     targetDot.classList.add("operator__current-slide");
   };
