@@ -916,6 +916,9 @@ p {
   .footer-nav > * {
     border-right: 1px solid white;
     padding: 0 1rem; }
+    @media only screen and (max-width: 576px) {
+      .footer-nav > * {
+        font-size: 0.5rem; } }
   .footer-nav:nth-last-child(0) {
     border-right: none; }
   .footer-item:link, .footer-item:visited {
