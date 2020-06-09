@@ -138,7 +138,8 @@ header {
   align-items: center;
   font-size: 1rem;
   padding: 0 8.5rem;
-  z-index: 99; }
+  z-index: 99;
+  transition: all 2s; }
   .nav .logo-content {
     height: 50px;
     filter: invert(1); }
@@ -189,6 +190,8 @@ header {
         .nav-input:checked + .nav {
           background-color: #1c1c1c;
           position: relative; }
+          .nav-input:checked + .nav > .logo {
+            opacity: 0; }
           .nav-input:checked + .nav > .nav-button {
             position: absolute;
             top: 2.3rem;
